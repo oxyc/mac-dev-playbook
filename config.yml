@@ -143,6 +143,7 @@ homebrew_taps:
   - homebrew/php
   - homebrew/versions
   - laurent22/massren
+  - oxyc/custom
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -151,6 +152,7 @@ homebrew_cask_apps:
   - font-inconsolata-dz-for-powerline
   - google-chrome
   - lastpass
+  - kitty # terminal
   - nvalt
   - slack
   - sublime-text
