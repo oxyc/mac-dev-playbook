@@ -1,0 +1,169 @@
+---
+downloads: ~/.ansible-downloads/
+
+configure_sudoers: yes
+configure_terminal: no
+configure_osx: yes
+
+dotfiles_repo: https://github.com/oxyc/dotfiles.git
+dotfiles_repo_accept_hostkey: yes
+dotfiles_repo_local_destination: ~/Projects/Personal/dotfiles
+dotfiles_files:
+  - .agignore
+  - .bash_profile
+  - .bashrc
+  - .dircolors
+  - .gitconfig
+  - .gitignore
+  - .inputrc
+  - .lftprc
+  - .ls++.conf
+  - .bash/aliases.sh
+  - .bash/colors.sh
+  - .bash/drush.sh
+  - .bash/exports.sh
+  - .bash/functions.sh
+  - .bash/prompt.sh
+  - .bash/shell.sh
+  - .bash/ssh-agent.sh
+  - .bash_completion.d/misc
+  - .osx/osx.sh
+
+homebrew_installed_packages:
+  # Install GNU packages.
+  # https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
+  - coreutils
+  - binutils
+  - diffutils
+  - { name: ed, install_options: "default-names" }
+  - { name: findutils, install_options: "with-default-names" }
+  - name: gawk
+  - { name: gnu-indent, install_options: "with-default-names" }
+  - { name: gnu-sed, install_options: "with-default-names" }
+  - { name: gnu-tar, install_options: "with-default-names" }
+  - { name: gnu-which, install_options: "with-default-names" }
+  - gnutls
+  - { name: grep, install_options: "with-default-names" }
+  - gzip
+  - screen
+  - watch
+  - { name: wdiff, install_options: "with-gettext" }
+  - wget
+  # Update GNU pre-installed packages.
+  - bash
+  - emacs
+  - gdb
+  - gpatch
+  - less
+  - m4
+  - make
+  - nano
+  # Update non-GNU pre-installed packages.
+  - file-formula
+  - git
+  - openssh
+  - perl
+  - python
+  - rsync
+  - svn
+  - unzip
+  - rsync
+
+  # Other essential tools
+  - tree                      # recursive directory listing
+  - ssh-copy-id               #
+  - bash-completion2          # bash 4 completions
+  - mosh                      # mobile shell
+  - rename                    # regex rename
+  - massren                   # mass renaming in vim
+  - the_silver_searcher       # ag, faster than ack
+  - fzf                       # fuzzy finder
+  - fasd                      # autojump
+  - exa                       # ls replacement
+  - vagrant-completion
+  - libyaml
+  - php71
+
+  # More terminal tools.
+  - nmap                      # network mapper
+  - lua                       # scripting
+  - exiv2                     # image metadata library
+  - lynx                      # browser
+  - p7zip                     # 7 zip
+  - pigz                      # parallel gzip
+  - pv                        # pipe viewer
+  - zopfli                    # zopfli compression
+  - httpie                    # cli http client
+  - iperf                     # bandwidth benchmarking
+  - wrk                       # http benchmarking
+
+  # todo
+  - autoconf
+  - chromedriver
+  - doxygen
+  - gettext
+  - go
+  - gpg
+  - libevent
+  - mcrypt
+  - npm
+  - readline
+  - openssl
+
+  # Image tools
+  - pngcheck
+  - mozjpeg
+  - optipng
+  - webp
+  - gifsicle
+  - { name: imagemagick, install_options: "with-webp" }
+
+  # Vim
+  - luajit
+  - { name: vim, install_options: "with-luajit,without-ruby,override-system-vi" }
+
+  # Install font tools.
+  - sfnt2woff
+  - sfnt2woff-zopfli
+  - woff2
+
+homebrew_taps:
+  - bramstein/webfonttools
+  - caskroom/cask
+  - caskroom/fonts
+  - homebrew/completions
+  - homebrew/core
+  - homebrew/binary
+  - homebrew/dupes
+  - homebrew/php
+  - homebrew/versions
+  - laurent22/massren
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - docker
+  - dropbox
+  - firefox
+  - font-inconsolata-dz-for-powerline
+  - google-chrome
+  - lastpass
+  - nvalt
+  - slack
+  - sublime-text
+  - transmission
+  - transmit
+  - vagrant
+  - virtualbox
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps: []
+mas_email: ""
+mas_password: ""
+
+extra_git:
+  - repo: https://github.com/chriskempson/base16-shell.git
+    dest: ~/.local/lib/base16-shell
+  - repo: git@github.com:oxyc/vimrc.git
+    dest: ~/Projects/Personal/vimrc
+
+osx_script: ~/.osx/osx.sh
