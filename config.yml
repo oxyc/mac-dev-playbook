@@ -17,10 +17,8 @@ dotfiles_files:
   - .gitignore
   - .inputrc
   - .lftprc
-  - .ls++.conf
   - .bash/aliases.sh
   - .bash/colors.sh
-  - .bash/drush.sh
   - .bash/exports.sh
   - .bash/functions.sh
   - .bash/prompt.sh
@@ -103,6 +101,7 @@ homebrew_installed_packages:
   - exa                       # ls replacement
   - fasd                      # autojump
   - fzf                       # fuzzy finder
+  - khd                       # hotkey daemon
   - massren                   # mass renaming in vim
   - mosh                      # mobile shell
   - rename                    # regex rename
