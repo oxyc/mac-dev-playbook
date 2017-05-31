@@ -171,10 +171,52 @@ mas_installed_apps: []
 mas_email: ""
 mas_password: ""
 
-extra_git:
-  - repo: https://github.com/chriskempson/base16-shell.git
-    dest: ~/.local/lib/base16-shell
-  - repo: git@github.com:oxyc/vimrc.git
-    dest: ~/Projects/Personal/vimrc
-
 osx_script: ~/.osx/osx.sh
+
+post_provision_tasks:
+  - "custom/*.yml"
+
+# Variables used across custom/*.yml
+local_user: "{{ ansible_env.SUDO_USER | default(ansible_env.USER, true) | default(ansible_user_id, true) }}"
+
+# custom/packages.yml settings.
+npm_packages:
+  - name: yarn
+  - name: webpack
+  - name: bower
+  - name: gulp
+  - name: svgo
+
+gem_packages:
+  - name: bundler
+  - name: capistrano
+  - name: rubocop
+
+pip_packages:
+  - name: mkdocs
+
+# custom/composer.yml settings.
+composer_keep_updated: true
+composer_add_to_path: false
+composer_add_project_to_path: false
+composer_home_path: '~/.composer'
+composer_home_owner: "{{ local_user }}"
+composer_home_group: "staff"
+composer_global_packages:
+  - { name: hirak/prestissimo, release: '^0.3' }
+  - { name: wp-cli/wp-cli, release: '^1.0' }
+  - { name: drush/drush, release: '^8.1' }
+
+# custom/vagrant.yml settings.
+vagrant_plugins_force_install: false
+vagrant_plugins:
+  - vagrant-hostsupdater
+  - vagrant-vbguest
+
+# custom/vim.yml settings.
+vimrc_repo: https://github.com/oxyc/vimrc.git
+vimrc_repo_local_destination: ~/Projects/Personal/vimrc
+
+# custom/bash.yml
+base16_repo: https://github.com/chriskempson/base16-shell.git
+base16_repo_local_destination: ~/.local/lib/base16-shell
