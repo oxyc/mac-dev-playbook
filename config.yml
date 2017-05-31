@@ -90,12 +90,11 @@ homebrew_installed_packages:
   - npm # @todo
   - go
   - php71
-  - python3 # required by kitty
+  - python3
   - ruby
 
   # Libraries
   - luajit                    # required by vim
-  - glfw                      # required by kitty.app
 
   # Essential development tools/libraries.
   - exa                       # ls replacement
@@ -132,33 +131,40 @@ homebrew_installed_packages:
   - woff2
 
 homebrew_taps:
-  - bramstein/webfonttools
-  - caskroom/cask
-  - caskroom/fonts
-  - homebrew/completions
-  - homebrew/core
-  - homebrew/binary
-  - homebrew/dupes
-  - homebrew/php
-  - homebrew/versions
-  - laurent22/massren
-  - oxyc/custom
+  - bramstein/webfonttools # font tools
+  - caskroom/cask          # casks
+  - caskroom/fonts         # inconsolata font
+  - caskroom/versions      # iterm2-beta
+  - homebrew/completions   # bash completions
+  - homebrew/core          #
+  - homebrew/binary        #
+  - homebrew/dupes         #
+  - homebrew/php           #
+  - homebrew/versions      #
+  - koekeishiya/formulae   # chunkwm, khd
+  - laurent22/massren      # massren
+  - oxyc/custom            # kitty, etc
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - docker
-  - firefox
-  - font-inconsolata-dz-for-powerline
-  - google-chrome
-  - lastpass
-  - kitty # terminal
-  - nvalt
-  - slack
-  - sublime-text
-  - transmission
-  - transmit
-  - vagrant
-  - virtualbox
+  - alfred                 # launcher
+  - adobe-dng-converter    # arw -> dng
+  - docker                 # work
+  - firefox                # crossbrowser testing
+  - font-inconsolata-dz-for-powerline # dev font
+  - google-chrome          # primary browser
+  - iina                   # movie player
+  - iterm2-beta            # beta for no-window-bar
+  - lastpass               # browser plugins
+  - nvalt                  # note taking
+  - playmemories-home      # sony camera
+  - skype                  # work
+  - slack                  # work
+  - sublime-text           # work
+  - transmission           # torrents
+  - transmit               # ftp/sftp client
+  - vagrant                # work
+  - virtualbox             # work
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
