@@ -65,7 +65,6 @@ homebrew_installed_packages:
   - rsync
   - svn
   - unzip
-  - rsync
 
   # Some other GNU tools.
   - autoconf                  # build tool
