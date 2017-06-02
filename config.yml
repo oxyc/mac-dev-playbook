@@ -150,6 +150,7 @@ homebrew_cask_apps:
   - alfred                 # launcher
   - adobe-dng-converter    # arw -> dng
   - docker                 # work
+  - filezilla              # ftp gui
   - firefox                # crossbrowser testing
   - font-inconsolata-dz-for-powerline # dev font
   - google-chrome          # primary browser
