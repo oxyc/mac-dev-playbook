@@ -86,7 +86,7 @@ homebrew_installed_packages:
 
   # Programming languages
   - lua
-  - npm # @todo
+  - node
   - go
   - php71
   - python3
