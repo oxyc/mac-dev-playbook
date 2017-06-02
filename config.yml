@@ -96,6 +96,7 @@ homebrew_installed_packages:
   - luajit                    # required by vim
 
   # Essential development tools/libraries.
+  - { name: base16-shell, install_options: "HEAD" } # base16 colors in shell
   - exa                       # ls replacement
   - fasd                      # autojump
   - fzf                       # fuzzy finder
@@ -142,7 +143,7 @@ homebrew_taps:
   - homebrew/php           #
   - koekeishiya/formulae   # chunkwm, khd
   - laurent22/massren      # massren
-  - oxyc/custom            # kitty, etc
+  - oxyc/custom            # base16-shell, kitty
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -210,7 +211,3 @@ vagrant_plugins:
 # custom/vim.yml settings.
 vimrc_repo: https://github.com/oxyc/vimrc.git
 vimrc_repo_local_destination: ~/Projects/Personal/vimrc
-
-# custom/bash.yml
-base16_repo: https://github.com/chriskempson/base16-shell.git
-base16_repo_local_destination: ~/.local/lib/base16-shell

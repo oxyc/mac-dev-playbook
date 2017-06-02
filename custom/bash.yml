@@ -12,9 +12,3 @@
   changed_when: chsh_result.rc != 0
   become: yes
   when: "'bash' in homebrew_installed_packages"
-
-- name: Get base16-shell repository (dotfiles dependency).
-  git:
-    repo: "{{ base16_repo }}"
-    dest: "{{ base16_repo_local_destination }}"
-    accept_hostkey: "{{ base16_repo_accept_hostkey|default(false) }}"
