@@ -1,4 +1,0 @@
-- name: Install Composer and composer packages.
-  include_role:
-    name: geerlingguy.composer
-  tags: ['composer']

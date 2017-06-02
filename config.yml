@@ -108,6 +108,9 @@ homebrew_installed_packages:
   - tree                      # recursive directory listing
   - { name: vim, install_options: "with-luajit,without-ruby,override-system-vi" }
 
+  # Package managers
+  - composer
+
   # Shell completions
   - bash-completion2 # bash 4
   - cap-completion
@@ -173,13 +176,13 @@ mas_password: ""
 
 osx_script: ~/.osx/osx.sh
 
-post_provision_tasks:
-  - "custom/*.yml"
+composer_packages:
+  - name: hirak/prestissimo
+  - name: wp-cli/wp-cli
+    version: '~1.1.0'
+  - name: drush/drush
+    version: '^8.1'
 
-# Variables used across custom/*.yml
-local_user: "{{ ansible_env.SUDO_USER | default(ansible_env.USER, true) | default(ansible_user_id, true) }}"
-
-# custom/packages.yml settings.
 npm_packages:
   - name: yarn
   - name: webpack
@@ -195,17 +198,11 @@ gem_packages:
 pip_packages:
   - name: mkdocs
 
-# custom/composer.yml settings.
-composer_keep_updated: true
-composer_add_to_path: false
-composer_add_project_to_path: false
-composer_home_path: '~/.composer'
-composer_home_owner: "{{ local_user }}"
-composer_home_group: "staff"
-composer_global_packages:
-  - { name: hirak/prestissimo, release: '^0.3' }
-  - { name: wp-cli/wp-cli, release: '^1.0' }
-  - { name: drush/drush, release: '^8.1' }
+post_provision_tasks:
+  - "custom/*.yml"
+
+# Variables used across custom/*.yml
+local_user: "{{ ansible_env.SUDO_USER | default(ansible_env.USER, true) | default(ansible_user_id, true) }}"
 
 # custom/vagrant.yml settings.
 vagrant_plugins_force_install: false
