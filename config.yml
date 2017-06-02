@@ -155,13 +155,11 @@ homebrew_cask_apps:
   - iina                   # movie player
   - iterm2-beta            # beta for no-window-bar
   - lastpass               # browser plugins
-  - nvalt                  # note taking
   - playmemories-home      # sony camera
   - skype                  # work
   - slack                  # work
   - sublime-text           # work
   - transmission           # torrents
-  - transmit               # ftp/sftp client
   - vagrant                # work
   - virtualbox             # work
 
